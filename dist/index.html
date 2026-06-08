@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONSTER KEYCHAIN // Premium 3D Interactive Showcase</title>
+  <meta name="description" content="Immersive 3D product showcase for the premium Monster Energy can keychain. Grade 5 titanium, black chrome, and toxic green accents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-C6zC6m1u.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DWFjmBjL.css">
+</head>
+<body>
+  <!-- Three.js Canvas -->
+  <canvas class="webgl"></canvas>
+
+  <!-- Floating HUD Callouts Overlay (projects over exploded 3D model) -->
+  <div id="callouts-hud" class="hud-container">
+    <div class="callout-label" id="callout-ring">
+      <div class="hud-pointer"></div>
+      <div class="callout-box">
+        <span class="hud-tag">// HANGER</span>
+        <h4>TITANIUM KEYRING</h4>
+        <p>Premium Grade 5 titanium loop hanger</p>
+      </div>
+    </div>
+    
+    <div class="callout-label" id="callout-connector">
+      <div class="hud-pointer"></div>
+      <div class="callout-box">
+        <span class="hud-tag">// CONNECTOR</span>
+        <h4>BLACK CHROME CHAIN</h4>
+        <p>Interlocking specular chrome link segments</p>
+      </div>
+    </div>
+    
+    <div class="callout-label" id="callout-core">
+      <div class="hud-pointer"></div>
+      <div class="callout-box">
+        <span class="hud-tag">// HOUSING</span>
+        <h4>CAN CHASSIS</h4>
+        <p>Brushed titanium capsule with glowing claw logo</p>
+      </div>
+    </div>
+    
+    <div class="callout-label" id="callout-casing">
+      <div class="hud-pointer"></div>
+      <div class="callout-box">
+        <span class="hud-tag">// DETAIL</span>
+        <h4>CHROME LIDS & PULL-TAB</h4>
+        <p>Polished black chrome caps with exact can detailing</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Premium Loader Overlay -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <h2 class="loader-title">MONSTER KEYCHAIN</h2>
+      <div class="loader-bar-container">
+        <div class="loader-bar"></div>
+      </div>
+      <div class="loader-status">
+        <span class="status-text">INITIALIZING QUANTUM SYSTEMS...</span>
+        <span class="status-percent">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Container for Lenis -->
+  <main id="app-wrapper">
+    
+    <!-- Section 1: Intro Hero -->
+    <section id="hero" class="scroll-section">
+      <div class="container hero-container">
+        <div class="hero-left">
+          <div class="tagline">// THE APEX OF ACCESSORIES</div>
+          <h1 class="main-title">COLLECTIBLE<br><span class="neon-text">CAN KEYCHAINS</span></h1>
+          <div class="scroll-indicator">
+            <span class="indicator-line"></span>
+            <span class="indicator-text">SCROLL TO EXPLORE THE GALLERY</span>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-product-image">
+            <img src="/assets/keychain_hero-DosNZcSg.png" alt="Monster Energy Can Keychain Hero" class="product-img">
+            <div class="glow-underlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1.5: Our Collection Showcase -->
+    <section id="our-collection" class="scroll-section">
+      <div class="collection-image-wrapper">
+        <div class="collection-parallax-wrapper">
+          <img src="/assets/collection-showcase-D9PfFCxK.png" alt="Beverage Can Keychain Collection" class="collection-showcase-img">
+        </div>
+        <div class="collection-overlay"></div>
+        <div class="collection-vignette"></div>
+      </div>
+      <div class="container collection-content-container">
+        <div class="collection-text-content">
+          <span class="collection-tagline">// COLLECTOR SERIES</span>
+          <h2 class="collection-title">Premium Beverage<br>Can Keychains</h2>
+          <p class="collection-subheading">Crafted for collectors. Designed to stand out. Inspired by the world's most iconic beverage brands.</p>
+          <button class="collection-cta-btn" id="btn-explore-collection">
+            <span class="btn-glow"></span>
+            <span class="btn-text">Explore Collection</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Product Core Design -->
+    <section id="core-formation" class="scroll-section">
+      <div class="container right-aligned">
+        <div class="content-box">
+          <div class="section-number">01</div>
+          <h2 class="section-title">THE METAL CROWN</h2>
+          <p class="section-desc">
+            An exact miniature reproduction of the iconic energy can. Meticulously lathed from brushed aerospace titanium and capped with mirror-polished chrome lids.
+          </p>
+          <div class="spec-list">
+            <div class="spec-item">
+              <span class="label">SHELL MATERIAL</span>
+              <span class="val text-neon">Aerospace Titanium</span>
+            </div>
+            <div class="spec-item">
+              <span class="label">LID FINISH</span>
+              <span class="val text-neon">Mirror Black Chrome</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Macro Detail Zoom (Surface Scan) -->
+    <section id="camera-tunnel" class="scroll-section">
+      <div class="container centered">
+        <div class="tunnel-indicator">
+          <div class="glitch-text" data-text="MACRO SURFACE SCAN">MACRO SURFACE SCAN</div>
+          <p class="sub-text">REVEALING 3D CONDENSATION DROPLETS & BRUSHED ANISOTROPIC REFLECTIONS</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Product Reveal -->
+    <section id="product-reveal" class="scroll-section">
+      <div class="container left-aligned">
+        <div class="content-box">
+          <div class="section-number">02</div>
+          <h2 class="section-title">THE COMPOSITION</h2>
+          <p class="section-desc">
+            Interlocking solid steel keyrings and tactical paracord weaves align to form an indestructible connection. Engineering meeting luxury.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Interactive 360° Product Viewer -->
+    <section id="viewer-360" class="scroll-section">
+      <div class="container split-container">
+        <div class="viewer-ui">
+          <div class="ui-panel left-panel">
+            <h3 class="panel-header">// 360 PRODUCT EXPLORER</h3>
+            <p class="panel-desc">Drag to rotate the Monster can. Zoom to inspect the physical water droplets and pull-tab detail.</p>
+            <div class="control-hints">
+              <span class="hint-item">[ DRAG ] Mouse rotation</span>
+              <span class="hint-item">[ SCROLL ] Zoom focus</span>
+              <span class="hint-item">[ CLICK ] Part callout details</span>
+            </div>
+          </div>
+          <div class="ui-panel right-panel">
+            <div class="view-shortcuts">
+              <button class="view-btn" id="btn-front">FRONT</button>
+              <button class="view-btn" id="btn-top">TOP</button>
+              <button class="view-btn" id="btn-bottom">BOTTOM</button>
+              <button class="view-btn" id="btn-exploded">EXPLODED VIEW</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Exploded View Animation -->
+    <section id="exploded-view" class="scroll-section">
+      <div class="container centered">
+        <div class="explosion-info">
+          <h2 class="section-title">ENGINEERED SPLIT</h2>
+          <p class="section-desc">Keyring, connector links, tactical nylon loops, lathed caps, pull tab, and capsule body separate vertically to reveal every micrometric detail.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Product Details (macro camera focuses) -->
+    <section id="product-details" class="scroll-section">
+      <div class="details-carousel">
+        <div class="details-slide active" id="detail-1">
+          <div class="slide-content">
+            <span class="spec-tag">// DETAILED FOCUS</span>
+            <h3>PULL-TAB & RECESS</h3>
+            <p>Every tiny indentation is modeled. The engraved tab, double-recessed lid rim, and vertical brushing emulate the crown of a luxury timepiece.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection Showcase Section -->
+    <section id="collection-showcase" class="scroll-section">
+      <div class="collection-showcase-container">
+        <div class="showcase-header">
+          <span class="spec-tag">// BRANDS COLLECTION</span>
+          <h2 class="section-title">COLLECTION SHOWCASE</h2>
+        </div>
+        
+        <div class="cards-orbit-wrapper">
+          <div class="orbit-center-glow"></div>
+          
+          <div class="showcase-card" data-brand="3">
+            <div class="card-glow"></div>
+            <span class="card-tag">// RED BULL</span>
+            <h3 class="card-brand-title">Red Bull</h3>
+            <p class="card-desc">Tactical energy can keychain, compact and high contrast.</p>
+            <div class="card-spec">Material: Titanium + Matte Finish</div>
+          </div>
+          
+          <div class="showcase-card" data-brand="1">
+            <div class="card-glow"></div>
+            <span class="card-tag">// COCA COLA</span>
+            <h3 class="card-brand-title">Coca Cola</h3>
+            <p class="card-desc">Classic soda can keychain with timeless logo details.</p>
+            <div class="card-spec">Material: Polished Chrome + Alloy</div>
+          </div>
+          
+          <div class="showcase-card" data-brand="0">
+            <div class="card-glow"></div>
+            <span class="card-tag">// MONSTER ENERGY</span>
+            <h3 class="card-brand-title">Monster Energy</h3>
+            <p class="card-desc">Premium energy can keychain with green accent highlight.</p>
+            <div class="card-spec">Material: Black Chrome + Aluminum</div>
+          </div>
+          
+          <div class="showcase-card" data-brand="2">
+            <div class="card-glow"></div>
+            <span class="card-tag">// PEPSI</span>
+            <h3 class="card-brand-title">Pepsi</h3>
+            <p class="card-desc">Dynamic globe mini-can keychain with high-gloss finish.</p>
+            <div class="card-spec">Material: Brushed Steel + Enamel</div>
+          </div>
+          
+          <div class="showcase-card" data-brand="4">
+            <div class="card-glow"></div>
+            <span class="card-tag">// SPRITE</span>
+            <h3 class="card-brand-title">Sprite</h3>
+            <p class="card-desc">Crisp lemon-lime miniature soda can keychain.</p>
+            <div class="card-spec">Material: Anodized Zinc + Neon</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Final CTA -->
+    <section id="final-cta" class="scroll-section">
+      <div class="container centered cta-container">
+        <h2 class="cta-title">OWN THE KEYCHAIN</h2>
+        <p class="cta-desc">Limited edition series. Built for those who demand ultimate utility and style.</p>
+        <button class="cta-btn">
+          <span class="btn-glow"></span>
+          <span class="btn-text">ACQUIRE CORE KEYCHAIN</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Main JavaScript File -->
+</body>
+</html>
