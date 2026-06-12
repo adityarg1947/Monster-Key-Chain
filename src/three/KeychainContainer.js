@@ -41,7 +41,7 @@ export class KeychainContainer {
   /**
    * Initializes assembly. Loads GLB or fires procedural compile on error.
    */
-  async init(glbPath = '/src/assets/models/keychain.glb') {
+  async init(glbPath = '/models/keychain.glb') {
     try {
       const loader = new GLTFLoader();
       const gltf = await new Promise((resolve, reject) => {

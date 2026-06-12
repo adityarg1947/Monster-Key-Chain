@@ -107,13 +107,13 @@ export class KeychainMaterials {
 
     let brandTex;
     const paths = [
-      '/src/assets/textures/monster.png',
-      '/src/assets/textures/coca.png',
-      '/src/assets/textures/pespsi.png',
-      '/src/assets/textures/redbul.png',
-      '/src/assets/textures/sprite.png',
-      '/src/assets/textures/coca.png',   // Fallback 5
-      '/src/assets/textures/sprite.png' // Fallback 6
+      '/textures/monster.png',
+      '/textures/coca.png',
+      '/textures/pespsi.png',
+      '/textures/redbul.png',
+      '/textures/sprite.png',
+      '/textures/coca.png',   // Fallback 5
+      '/textures/sprite.png' // Fallback 6
     ];
 
     brandTex = this.textureLoader.load(paths[brandType] || paths[0]);
