@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
 
 export class KeychainModel {
   constructor(renderer, scene) {
@@ -29,29 +29,10 @@ export class KeychainModel {
   /**
    * Initializes the model. Tries to load from GLB, falls back to procedural model.
    */
-  async init(glbPath = '/src/assets/models/keychain.glb') {
-    try {
-      const loader = new GLTFLoader();
-      const gltf = await new Promise((resolve, reject) => {
-        loader.load(
-          glbPath,
-          (data) => resolve(data),
-          null,
-          (err) => reject(err)
-        );
-      });
-      
-      console.log('Successfully loaded GLB keychain model.');
-      
-      // Parse loaded model and map parts
-      this.group.add(gltf.scene);
-      this.parseModelParts(gltf.scene);
-      this.applyPremiumMaterials();
-      
-    } catch (error) {
-      console.warn(`GLB load failed (${error.message}). Reverting to procedural high-fidelity fallback.`);
-      this.createFallbackModel();
-    }
+  async init() {
+    // Directly use procedural fallback as GLB model is unavailable
+    this.assembleProceduralFallback();
+    console.log(`Object Loaded: Brand ${this.brandType} Procedural Fallback Keychain.`);
   }
 
   /**
